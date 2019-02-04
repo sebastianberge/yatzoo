@@ -28,7 +28,10 @@ public class Player {
         boolean isDone = false;
         while (rolls < 3 && !isDone) {
             System.out.println("Which values would you like to keep? (Write numbers separated by space)");
-            String answer = scanner.nextLine();
+            String answer = "";
+            while (scanner.hasNextLine()) {
+                answer = scanner.nextLine();
+            }
 
             if (!answer.isEmpty() && !answer.equals("") && !answer.equals(" ")) {
                 String[] keep = answer.split(" ");
