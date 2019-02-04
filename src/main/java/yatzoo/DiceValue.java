@@ -36,7 +36,7 @@ public class DiceValue {
     /**
      * @return the animal
      */
-    public Animals getAnimal() {
-        return animal;
+    public String getAnimal() {
+        return animal.toString();
     }
 }

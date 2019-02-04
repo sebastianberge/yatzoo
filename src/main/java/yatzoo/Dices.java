@@ -37,7 +37,6 @@ public class Dices implements DicesADT {
         Dice diceToKeep = null;
         for (Dice dice : dices) {
             if (dice.getCurrentValue().equals(diceValueToKeep)) {
-
                 success = true;
                 diceToKeep = dice;
                 break;

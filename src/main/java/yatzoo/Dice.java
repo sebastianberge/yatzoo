@@ -10,7 +10,7 @@ public class Dice {
     private Random random = new Random();
 
     public Dice() {
-        this.random = new Random();
+        random = new Random();
     }
 
     public DiceValue rollDice() {
