@@ -76,8 +76,4 @@ public class Player {
     public long getScore() {
         return score;
     }
-
-    public void setScore(long score) {
-        this.score = score;
-    }
 }
