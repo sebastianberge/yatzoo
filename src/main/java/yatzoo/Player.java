@@ -8,8 +8,8 @@ import java.util.Scanner;
  */
 
 public class Player {
-    private String name;
-    private int score;
+    private final String name;
+    private long score;
 
     public Player(String name) {
         this.name = name;
@@ -57,7 +57,7 @@ public class Player {
                 System.out.println("---------------------------------------");
             }
         }
-        int roundScore = Score.getScore(diceCup.getAllDiceValues(), round.getCurrent());
+        long roundScore = Score.getScore(diceCup.getAllDiceValues(), round.getCurrent());
         score += roundScore;
         System.out.println("Your score this round is: " + roundScore);
         System.out.println("Your total score is: " + score);
@@ -73,11 +73,11 @@ public class Player {
     /**
      * @return the score
      */
-    public int getScore() {
+    public long getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(long score) {
         this.score = score;
     }
 }
