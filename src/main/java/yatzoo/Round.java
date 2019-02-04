@@ -3,9 +3,10 @@ package yatzoo;
 import java.util.Arrays;
 import java.util.List;
 
-/*
-Author: Ostensen
-*/
+/**
+ * @author Simen Ostensen
+ */
+
 public class Round {
 
     private List<String> list;
