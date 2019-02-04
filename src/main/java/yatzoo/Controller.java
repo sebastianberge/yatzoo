@@ -23,7 +23,7 @@ public class Controller {
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    System.out.println("An error occurred: " + e);
                 }
                 diceCup.reset();
             }
