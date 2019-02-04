@@ -14,6 +14,29 @@ public class DiceValue {
 
     @Override
     public boolean equals(Object o) {
-        if 
+        if (!(o instanceof DiceValue)) {
+            return false;
+        } else {
+            return this.animal == ((DiceValue) o).animal;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return animal.toString() + " " + value;
+    }
+
+    /**
+     * @return the value
+     */
+    public int getValue() {
+        return value;
+    }
+
+    /**
+     * @return the animal
+     */
+    public Animals getAnimal() {
+        return animal;
     }
 }
