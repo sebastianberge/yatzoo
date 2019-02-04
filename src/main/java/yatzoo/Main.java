@@ -3,9 +3,50 @@
  */
 package yatzoo;
 
+import javax.swing.JOptionPane;
+
 public class Main {
 
     public static void main(String[] args) {
-        // Main class
+        Player[] players = initPlayers(args);
+        new Controller(players);
     }
+
+    // Only public for unitTest
+    public static Player[] initPlayers(String[] args) {
+        Player[] players = null;
+
+        // Initialize players from args
+        if (args.length >= 2 && args.length <= 5) {
+            players = new Player[args.length];
+            for (int index = 0; index < args.length; index++) {
+                players[index] = new Player(args[index]);
+            }
+
+        } else {
+            int num_players = 0;
+            do {
+                String input = JOptionPane.showInputDialog("Enter numbers of players [2-5]");
+                if (input != null && input.length() == 1) {
+                    try {
+                        num_players = Integer.parseInt(input);
+                        if (num_players < 2 || num_players > 5) {
+                            JOptionPane.showMessageDialog(null, "Invalid number of players. Try again", "ERROR",
+                                    JOptionPane.ERROR_MESSAGE);
+                        }
+                    } catch (NumberFormatException e) {
+                        num_players = 0;
+                    }
+                }
+            } while (num_players < 2 || num_players > 5);
+            players = new Player[num_players];
+
+            for (int index = 0; index < num_players; index++) {
+                String playerName = JOptionPane.showInputDialog("Name of player #" + (index + 1));
+                players[index] = new Player(playerName);
+            }
+        }
+        return players;
+    }
+
 }
