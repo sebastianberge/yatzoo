@@ -1,11 +1,12 @@
 {
-    "configurations": [
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Main",
-            "request": "launch",
-            "mainClass": "yatzoo.Main",
-            "projectName": "yatzoo"
-        }
-    ]
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "console": "integratedTerminal",
+      "request": "launch",
+      "mainClass": "yatzoo.Main",
+      "projectName": "yatzoo"
+    }
+  ]
 }
