@@ -57,7 +57,7 @@ public class Player {
                 System.out.println("---------------------------------------");
             }
         }
-        long roundScore = Score.getScore(diceCup.getAllDiceValues(), round.getCurrent());
+        int roundScore = Score.getScore(diceCup.getAllDiceValues(), round.getCurrent());
         score += roundScore;
         System.out.println("Your score this round is: " + roundScore);
         System.out.println("Your total score is: " + score);
@@ -75,5 +75,9 @@ public class Player {
      */
     public int getScore() {
         return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }
