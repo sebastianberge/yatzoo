@@ -78,13 +78,6 @@ public class Score {
         return 0;
     }
 
-    /**
-     * Helper method
-     * 
-     * @param values, a list of DiceValues
-     * @param animal, an animal to be searched for
-     * @return the number of occurrences of the Animal in the DiceValues
-     */
     private static long getNumberOfAnimals(List<DiceValue> values, Animals animal) {
         return values.stream().filter(x -> x.getAnimal().equals(animal.toString())).count();
     }

@@ -6,7 +6,6 @@ import java.util.List;
 /*
 Author: Ostensen
 */
-
 public class Round {
 
     private List<String> list;
@@ -19,6 +18,18 @@ public class Round {
                 new String("Roll three similar animals"), new String("Roll four similar animals"),
                 new String("Roll a House"), new String("Roll a Straight"), new String("Roll a YATZOOO!!!"));
         this.current = 0;
+    }
+
+    public String getString() {
+        return list.get(current);
+    }
+
+    public int getCurrent() {
+        return current;
+    }
+
+    public void nextRound() {
+        current++;
     }
 
 }
