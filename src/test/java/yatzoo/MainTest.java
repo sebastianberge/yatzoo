@@ -14,5 +14,7 @@ public class MainTest {
         assertTrue(players[0].getClass().equals(names[0]));
         assertTrue(players[0].getClass().equals(names[1]));
         assertTrue(players[0].getClass().equals(names[2]));
+
+        assertTrue(players.length == names.length);
     }
 }
