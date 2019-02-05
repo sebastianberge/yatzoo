@@ -17,8 +17,8 @@ public class Round {
                 new String("Roll as many Snakes as possible!"), new String("Roll as many Pandas as possible!"),
                 new String("Roll as many Pigs as possible!"), new String("Roll as many Elephants as possible!"),
                 new String("Roll as many Whales as possible!"), new String("Roll three similar animals"),
-                new String("Roll four similar animals"), new String("Two pair (2+2)"), new String("Roll a House (2+3)"),
-                new String("Roll a Straight (all diffrent animals)"), new String("Roll a YATZOOO!!!"));
+                new String("Roll four similar animals"), new String("Roll a House"), new String("Roll a Straight"),
+                new String("Roll a YATZOOO!!!"));
         this.current = 0;
     }
 
