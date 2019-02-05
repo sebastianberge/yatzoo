@@ -1,7 +1,7 @@
 # yatzoo
 ### The Yatzoo game built on Java.
 
-## Information
+##Information
 Participants in the project:
 - Sebastian Berge
 - Simen Østensen
