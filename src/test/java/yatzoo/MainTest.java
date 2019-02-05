@@ -8,7 +8,11 @@ import static org.junit.Assert.*;
 
 public class MainTest {
     @Test
-    public void testAppHasAGreeting() {
-        Main classUnderTest = new Main();
+    public void testPlayers() {
+        String[] names = { "Simen", "Sebastian", "Morten" };
+        Player[] players = Main.initPlayers(names);
+        assertTrue(players[0].getClass().equals(names[0]));
+        assertTrue(players[0].getClass().equals(names[1]));
+        assertTrue(players[0].getClass().equals(names[2]));
     }
 }
