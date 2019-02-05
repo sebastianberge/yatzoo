@@ -11,9 +11,9 @@ public class MainTest {
     public void testPlayers() {
         String[] names = { "Simen", "Sebastian", "Morten" };
         Player[] players = Main.initPlayers(names);
-        assertTrue(players[0].getClass().equals(names[0]));
-        assertTrue(players[0].getClass().equals(names[1]));
-        assertTrue(players[0].getClass().equals(names[2]));
+        assertTrue(players[0].getName().equals(names[0]));
+        assertTrue(players[1].getName().equals(names[1]));
+        assertTrue(players[2].getName().equals(names[2]));
 
         assertTrue(players.length == names.length);
     }
