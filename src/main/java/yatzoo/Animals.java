@@ -1,5 +1,5 @@
 package yatzoo;
 
 public enum Animals {
-    LION, SNAKE, PANDA, PIG, ELEPHANT, WHALE
+    Lion, Snake, Panda, Pig, Elephant, Whale
 }

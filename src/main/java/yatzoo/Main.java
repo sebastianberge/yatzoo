@@ -26,7 +26,7 @@ public class Main {
         } else {
             int num_players = 0;
             do {
-                String input = JOptionPane.showInputDialog("Enter numbers of players [2-5]");
+                String input = JOptionPane.showInputDialog("Nr. of players 2-5: ");
                 if (input != null && input.length() == 1) {
                     try {
                         num_players = Integer.parseInt(input);

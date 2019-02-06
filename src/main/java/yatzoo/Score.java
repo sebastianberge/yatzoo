@@ -33,25 +33,20 @@ public class Score {
             }
             return pairs >= 2 ? 4 : 0;
         case 9:
-            // Full house
             int pairs_house = 0;
             int triples = 0;
             for (Animals animal : Animals.values()) {
                 long numAnim = getNumberOfAnimals(values, animal);
                 if (numAnim >= 3) {
                     triples++;
-                }
-                // Not relevant in this game setup, but consider using if instead to allow for
-                // more dice
-                // and the fact that two triples should also qualify for a score here
-                else if (numAnim >= 2) {
+                } else if (numAnim >= 2) {
                     pairs_house++;
                 }
 
             }
             return triples >= 1 && pairs_house >= 1 ? 5 : 0;
         case 10:
-            // five different:
+
             long highest = 0;
             for (Animals animal : Animals.values()) {
                 long numAnim = getNumberOfAnimals(values, animal);
@@ -62,7 +57,6 @@ public class Score {
             }
             return highest == 1 ? 5 : 0;
         case 11:
-            // yatzoo
             boolean yatzoo = true;
             Animals animal = values.get(0).animal;
             for (DiceValue val : values) {

@@ -31,7 +31,7 @@ public class Controller {
         }
 
         Player winner = whoWon();
-        System.out.println("---------------------------------------");
+        System.out.println("______________________________________________________________________________");
         System.out.println("\n" + "The winner is: " + winner.getName() + " with " + winner.getScore() + " points!");
 
     }

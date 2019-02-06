@@ -2,9 +2,6 @@ package yatzoo;
 
 import java.util.Random;
 
-/**
- * @author Sebastian Berge
- */
 public class Dice {
     DiceValue currentValue = null;
     private Random random = new Random();

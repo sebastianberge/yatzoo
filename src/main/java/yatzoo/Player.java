@@ -3,10 +3,6 @@ package yatzoo;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * @author Sebastian Berge
- */
-
 public class Player {
     private final String name;
     private long score;
@@ -21,13 +17,13 @@ public class Player {
         int rolls = 1;
         System.out
                 .println("\n" + "Player: " + name + ", Round: " + (round.getCurrent() + 1) + "\n" + round.getString());
-        System.out.println("Your dice values are: ");
-        System.out.println("---------------------------------------");
+        System.out.println("Your dices are: ");
+        System.out.println("______________________________________________________________________________");
         diceCup.getAllDiceValues().stream().forEach(System.out::println);
-        System.out.println("---------------------------------------");
+        System.out.println("______________________________________________________________________________");
         boolean isDone = false;
         while (rolls < 3 && !isDone) {
-            System.out.println("Which values would you like to keep? (Write numbers separated by space)");
+            System.out.println("Wirte the numbers with spaces of which animal nr you would like to keep.");
             String answer = scanner.nextLine();
 
             if (!answer.isEmpty() && !answer.equals("") && !answer.equals(" ")) {
@@ -46,15 +42,15 @@ public class Player {
                 }
                 diceValues = diceCup.rollDice();
                 rolls++;
-                System.out.println("---------------------------------------");
+                System.out.println("______________________________________________________________________________");
                 diceCup.getAllDiceValues().stream().forEach(System.out::println);
-                System.out.println("---------------------------------------");
+                System.out.println("______________________________________________________________________________");
             } else {
                 diceValues = diceCup.rollDice();
                 rolls++;
-                System.out.println("---------------------------------------");
+                System.out.println("______________________________________________________________________________");
                 diceCup.getAllDiceValues().stream().forEach(System.out::println);
-                System.out.println("---------------------------------------");
+                System.out.println("______________________________________________________________________________");
             }
         }
         long roundScore = Score.getScore(diceCup.getAllDiceValues(), round.getCurrent());
