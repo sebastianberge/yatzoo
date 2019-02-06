@@ -3,6 +3,7 @@ package yatzoo;
 import java.util.Scanner;
 
 public class Controller {
+
     private Player[] players;
     Round r;
     Scanner scanner;

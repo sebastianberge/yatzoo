@@ -3,6 +3,8 @@
  */
 package yatzoo;
 
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 public class Main {
@@ -15,6 +17,7 @@ public class Main {
     // Only public for unitTest
     public static Player[] initPlayers(String[] args) {
         Player[] players = null;
+        Scanner scanner = new Scanner(System.in);
 
         // Initialize players from args
         if (args.length >= 2 && args.length <= 5) {
@@ -26,13 +29,15 @@ public class Main {
         } else {
             int num_players = 0;
             do {
-                String input = JOptionPane.showInputDialog("Nr. of players 2-5: ");
+                System.out.println("Number of players [2-5]: ");
+                String input = scanner.nextLine();
+
                 if (input != null && input.length() == 1) {
                     try {
                         num_players = Integer.parseInt(input);
                         if (num_players < 2 || num_players > 5) {
-                            JOptionPane.showMessageDialog(null, "Invalid number of players. Try again", "ERROR",
-                                    JOptionPane.ERROR_MESSAGE);
+                            System.out.println("Invalid nr of players!");
+
                         }
                     } catch (NumberFormatException e) {
                         num_players = 0;
@@ -42,7 +47,8 @@ public class Main {
             players = new Player[num_players];
 
             for (int index = 0; index < num_players; index++) {
-                String playerName = JOptionPane.showInputDialog("Name of player #" + (index + 1));
+                System.out.println("Name of player #" + (index + 1));
+                String playerName = scanner.nextLine();
                 players[index] = new Player(playerName);
             }
         }
