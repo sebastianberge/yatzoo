@@ -2,11 +2,17 @@ package yatzoo;
 
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ * Player class
+ */
 public class Player {
     private final String name;
     private long score;
 
+    /**
+     * Constructor for Player class.
+     * @param name
+     */
     public Player(String name) {
         this.name = name;
         this.score = 0;
@@ -60,14 +66,14 @@ public class Player {
     }
 
     /**
-     * @return the name
+     * @return name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @return the score
+     * @return score
      */
     public long getScore() {
         return score;

@@ -1,7 +1,7 @@
 package yatzoo;
 
 /**
- * @author Sebastian Berge
+ * DiceValue class
  */
 public class DiceValue {
     public final Animals animal;
@@ -27,14 +27,14 @@ public class DiceValue {
     }
 
     /**
-     * @return the value
+     * @return value
      */
     public int getValue() {
         return value;
     }
 
     /**
-     * @return the animal
+     * @return animal
      */
     public String getAnimal() {
         return animal.toString();

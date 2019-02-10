@@ -1,7 +1,9 @@
 package yatzoo;
 
 import java.util.List;
-
+/**
+ * Score class
+ */
 public class Score {
 
     public static long getScore(List<DiceValue> values, int round) {

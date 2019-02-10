@@ -1,7 +1,9 @@
 package yatzoo;
 
 import java.util.Scanner;
-
+/**
+ * Controller class for initializing and starting the game.
+ */
 public class Controller {
 
     private Player[] players;

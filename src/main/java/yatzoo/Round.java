@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author Simen Ostensen
+ * Round class
  */
 
 public class Round {

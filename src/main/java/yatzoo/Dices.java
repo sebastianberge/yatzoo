@@ -2,7 +2,9 @@ package yatzoo;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Dices class that implements the DicesADT-interface.
+ */
 public class Dices implements DicesADT {
     List<Dice> dices;
     List<Dice> dicesToKeep;
@@ -10,6 +12,10 @@ public class Dices implements DicesADT {
 
     boolean isRolled;
 
+    /**
+     * Constructor for Dices class.
+     * @param ant
+     */
     public Dices(int ant) {
         this.ant = ant;
         isRolled = false;
