@@ -1,12 +1,15 @@
 package yatzoo;
 
 import java.util.Random;
+
 /**
  * Dice class that represents the dice and its current value.
  */
 public class Dice {
     DiceValue currentValue = null;
     private Random random = new Random();
+
+    -currentValue:DiceValue-random:Random
 
     /**
      * Constructor for class Dice
@@ -16,8 +19,8 @@ public class Dice {
     }
 
     /**
-     * Returns the current value of the Dice.
-     * Method for rolling the Dice.
+     * Returns the current value of the Dice. Method for rolling the Dice.
+     * 
      * @return currentValue
      */
     public DiceValue rollDice() {
@@ -27,6 +30,7 @@ public class Dice {
 
     /**
      * Method for getting the current value of the dice.
+     * 
      * @return currentValue
      */
     public DiceValue getCurrentValue() {
